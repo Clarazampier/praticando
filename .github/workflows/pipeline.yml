@@ -29,7 +29,7 @@ jobs:
            javac -cp . Teste.java
       
     #Executar o projeto  
-    - name: Executar o Projeto Teste
+    - name: Executar Projeto Teste
       run: |
            cd src
            java -cp . Teste
