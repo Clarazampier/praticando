@@ -40,7 +40,7 @@ jobs:
        image: anaclaraz/app_f
        tags: latest
        registry: docker.io
-       dockerfile: Dockerfile.ci
+       dockerfile: dockerfile
        username: ${{ secrets.DOCKER_USERNAME }}
        password: ${{ secrets.DOCKER_PASSWORD }}
 
