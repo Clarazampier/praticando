@@ -33,3 +33,14 @@ jobs:
       run: |
            cd src
            java -cp . Teste
+           
+    - uses: mr-smithers-excellent/docker-build-push@v6
+      name: Deploy no docker
+      with:
+       image: anaclaraz/app_f
+       tags: latest
+       registry: docker.io
+       dockerfile: Dockerfile.ci
+       username: ${{ secrets.DOCKER_USERNAME }}
+       password: ${{ secrets.DOCKER_PASSWORD }}
+
